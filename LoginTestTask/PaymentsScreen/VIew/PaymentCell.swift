@@ -29,10 +29,12 @@ class PaymentCell: UITableViewCell {
     
     private func setupConstraints() {
         contentView.addSubview(labelsStackView)
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.adjustsFontSizeToFitWidth = true
         labelsStackView.axis = .vertical
         labelsStackView.alignment = .fill
-        labelsStackView.distribution = .fill
-        labelsStackView.spacing = 4
+        labelsStackView.distribution = .fillProportionally
+        labelsStackView.spacing = 0
         labelsStackView.addArrangedSubview(amountLabel)
         labelsStackView.addArrangedSubview(currencyLabel)
         labelsStackView.addArrangedSubview(createdLabel)
@@ -40,15 +42,20 @@ class PaymentCell: UITableViewCell {
         labelsStackView.snp.makeConstraints { make in
             make.top.equalTo(contentView.snp.topMargin)
             make.left.equalTo(contentView.snp.leftMargin)
+            make.right.equalTo(contentView.snp.rightMargin)
+            make.bottom.equalTo(contentView.snp.bottomMargin)
         }
     }
-    
     func bindViewWith(viewModel: PaymentCellVM) {
         let payment = viewModel.payment
-        amountLabel.text = "Amount: \(payment.amount)"
+        let trimmed = "\(payment.amount)"
+        let removeCharacter: Set<Character> = ["(",")"]
+        var amountText = trimmed.trimmingCharacters(in: .letters)
+        amountText.removeAll(where: {removeCharacter.contains($0) })
+        amountText = amountText.replacingOccurrences(of: "\"", with: "", options: .regularExpression, range: nil)
+        amountLabel.text = "Amount: \(amountText)"
         currencyLabel.text = "Currency: \(payment.currency ?? "")"
         createdLabel.text = "Created: \(payment.created)"
         descriptionLabel.text = "Description: \(payment.desc)"
     }
-    
 }

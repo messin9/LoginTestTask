@@ -98,10 +98,35 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		B57D5951271F1C0800C2D477 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE8B8F271DC49A0056B25C /* PaymentsDefaultVM.swift */,
+				B57D594C271DDC6B00C2D477 /* PaymentCellVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B57D5952271F1C1700C2D477 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				B57D5948271DD3EF00C2D477 /* PaymentsVC.swift */,
+				B57D594A271DD9BB00C2D477 /* PaymentCell.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		B57D5953271F1C1E00C2D477 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B59FBC93271CBF9A00723CC2 /* GetModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B57DDF53271C3AC300C7F18F = {
 			isa = PBXGroup;
 			children = (
-				B57D594F271EF9BB00C2D477 /* Resources */,
 				B57DDF5E271C3AC300C7F18F /* LoginTestTask */,
 				B57DDF5D271C3AC300C7F18F /* Products */,
 				7642547CADD4EBD2544C92CA /* Pods */,
@@ -120,10 +145,11 @@
 		B57DDF5E271C3AC300C7F18F /* LoginTestTask */ = {
 			isa = PBXGroup;
 			children = (
-				B57D594E271EF94B00C2D477 /* Application */,
 				B5CE8B89271DA77E0056B25C /* PaymentsScreen */,
 				B5CE8B88271D95EC0056B25C /* LoginScreen */,
 				B5CE8B87271D95DE0056B25C /* Services */,
+				B57D594E271EF94B00C2D477 /* Application */,
+				B57D594F271EF9BB00C2D477 /* Resources */,
 				B57DDF68271C3AC800C7F18F /* Assets.xcassets */,
 				B57DDF6D271C3AC800C7F18F /* Info.plist */,
 			);
@@ -195,38 +221,11 @@
 		B5CE8B89271DA77E0056B25C /* PaymentsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				B5CE8B8A271DA7880056B25C /* Model */,
-				B5CE8B8C271DA7B80056B25C /* View */,
-				B5CE8B8B271DA7A50056B25C /* ViewModel */,
+				B57D5953271F1C1E00C2D477 /* Model */,
+				B57D5952271F1C1700C2D477 /* VIew */,
+				B57D5951271F1C0800C2D477 /* ViewModel */,
 			);
-			name = PaymentsScreen;
-			path = "New Group";
-			sourceTree = "<group>";
-		};
-		B5CE8B8A271DA7880056B25C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B59FBC93271CBF9A00723CC2 /* GetModel.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		B5CE8B8B271DA7A50056B25C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				B5CE8B8F271DC49A0056B25C /* PaymentsDefaultVM.swift */,
-				B57D594C271DDC6B00C2D477 /* PaymentCellVM.swift */,
-			);
-			name = ViewModel;
-			sourceTree = "<group>";
-		};
-		B5CE8B8C271DA7B80056B25C /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B57D5948271DD3EF00C2D477 /* PaymentsVC.swift */,
-				B57D594A271DD9BB00C2D477 /* PaymentCell.swift */,
-			);
-			name = View;
+			path = PaymentsScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
