@@ -22,7 +22,6 @@
 		B59FBC86271C939600723CC2 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FBC83271C939600723CC2 /* NetworkService.swift */; };
 		B59FBC8C271C946F00723CC2 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FBC8B271C946F00723CC2 /* Post.swift */; };
 		B59FBC8E271C947500723CC2 /* Get.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FBC8D271C947500723CC2 /* Get.swift */; };
-		B59FBC90271C9E0400723CC2 /* Data + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FBC8F271C9E0400723CC2 /* Data + Extension.swift */; };
 		B59FBC92271CBC1300723CC2 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FBC91271CBC1300723CC2 /* PostModel.swift */; };
 		B59FBC94271CBF9A00723CC2 /* GetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59FBC93271CBF9A00723CC2 /* GetModel.swift */; };
 		B5CE8B90271DC49A0056B25C /* PaymentsDefaultVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8B8F271DC49A0056B25C /* PaymentsDefaultVM.swift */; };
@@ -45,7 +44,6 @@
 		B59FBC83271C939600723CC2 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B59FBC8B271C946F00723CC2 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		B59FBC8D271C947500723CC2 /* Get.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Get.swift; sourceTree = "<group>"; };
-		B59FBC8F271C9E0400723CC2 /* Data + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data + Extension.swift"; sourceTree = "<group>"; };
 		B59FBC91271CBC1300723CC2 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		B59FBC93271CBF9A00723CC2 /* GetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetModel.swift; sourceTree = "<group>"; };
 		B5CE8B8F271DC49A0056B25C /* PaymentsDefaultVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentsDefaultVM.swift; sourceTree = "<group>"; };
@@ -83,9 +81,27 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B57D594E271EF94B00C2D477 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B57DDF5F271C3AC300C7F18F /* AppDelegate.swift */,
+				B57DDF61271C3AC300C7F18F /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		B57D594F271EF9BB00C2D477 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B57DDF6A271C3AC800C7F18F /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B57DDF53271C3AC300C7F18F = {
 			isa = PBXGroup;
 			children = (
+				B57D594F271EF9BB00C2D477 /* Resources */,
 				B57DDF5E271C3AC300C7F18F /* LoginTestTask */,
 				B57DDF5D271C3AC300C7F18F /* Products */,
 				7642547CADD4EBD2544C92CA /* Pods */,
@@ -104,15 +120,12 @@
 		B57DDF5E271C3AC300C7F18F /* LoginTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				B57D594E271EF94B00C2D477 /* Application */,
 				B5CE8B89271DA77E0056B25C /* PaymentsScreen */,
 				B5CE8B88271D95EC0056B25C /* LoginScreen */,
 				B5CE8B87271D95DE0056B25C /* Services */,
-				B57DDF5F271C3AC300C7F18F /* AppDelegate.swift */,
-				B57DDF61271C3AC300C7F18F /* SceneDelegate.swift */,
 				B57DDF68271C3AC800C7F18F /* Assets.xcassets */,
-				B57DDF6A271C3AC800C7F18F /* LaunchScreen.storyboard */,
 				B57DDF6D271C3AC800C7F18F /* Info.plist */,
-				B59FBC8F271C9E0400723CC2 /* Data + Extension.swift */,
 			);
 			path = LoginTestTask;
 			sourceTree = "<group>";
@@ -182,9 +195,9 @@
 		B5CE8B89271DA77E0056B25C /* PaymentsScreen */ = {
 			isa = PBXGroup;
 			children = (
+				B5CE8B8A271DA7880056B25C /* Model */,
 				B5CE8B8C271DA7B80056B25C /* View */,
 				B5CE8B8B271DA7A50056B25C /* ViewModel */,
-				B5CE8B8A271DA7880056B25C /* Model */,
 			);
 			name = PaymentsScreen;
 			path = "New Group";
@@ -333,7 +346,6 @@
 				B57D594B271DD9BB00C2D477 /* PaymentCell.swift in Sources */,
 				B57DDF64271C3AC300C7F18F /* ViewController.swift in Sources */,
 				B5CE8B90271DC49A0056B25C /* PaymentsDefaultVM.swift in Sources */,
-				B59FBC90271C9E0400723CC2 /* Data + Extension.swift in Sources */,
 				B59FBC84271C939600723CC2 /* DataRequest.swift in Sources */,
 				B57DDF60271C3AC300C7F18F /* AppDelegate.swift in Sources */,
 				B57D5949271DD3EF00C2D477 /* PaymentsVC.swift in Sources */,

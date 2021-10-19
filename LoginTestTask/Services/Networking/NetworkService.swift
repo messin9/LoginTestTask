@@ -66,7 +66,6 @@ final class DefaultNetworkService: NetworkService {
                 try completion(.success(request.decode(data)))
             } catch let error as NSError {
                 completion(.failure(error))
-//                print(data.prettyPrintedJSONString)
             }
         }
         .resume()
